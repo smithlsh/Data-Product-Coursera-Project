@@ -1,3 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Component Analyzer</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Component Analyzer">
+  <meta name="author" content="Shep Smithline">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/slidify.css"></link>
 
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
 
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Component Analyzer</h1>
+    <h2>A Tool for Investigating Machine Part Reliability</h2>
+    <p>Shep Smithline<br/>R programmer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
 
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>In large engineering companies there is a big need for reliability data to be easily
+shared with multiple engineering groups</p></li>
+<li><p>Managers are often disconnected from engineers and 
+don&#39;t undertstand the reliability of ctitical
+parts which is needed in their decision making
+process</p></li>
+<li><p>Example: Space Shuttle Columbia disaster in 1986.
+Management estimated the probability o-ring failure to
+to be one in a million. They did not understand the way
+temperature effects the response of the o-rings.</p></li>
+<li><p>Result: Eight lives lost in an accident that could have been 
+easily prevented.</p></li>
+<li><p>The statisical analysis to estimate reliabiliy
+can be difficult: F-tests, ANOVA, Confidence Intervals....</p></li>
+<li><p>Not everyone (or at least not yet) has taken the Coursera
+Data Science classes on statistical inference, regession
+or machine learning.  </p></li>
+<li><p>Therefore, need an easy visual way to understand the data:
+<b><i>The Component Analyzer!</b></i></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Statistical Analysis with R</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>R lets you do the analysis and display the results </li>
+<li>But R does allow non-R users (managers!!) easily see results and does not let users
+pull multiple analyses together.</li>
+</ul>
+
+<pre><code class="r">logitmod&lt;-glm(cbind(damage,6-damage)~temp,family=binomial,orings)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Component Analyzer</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Picks up where R left off.  The Component Analyser lets non-expert users view data from multiple sources and quicky understand how enviornmental influences can affect the probability of part failure.</p></li>
+<li><p>Here is an image from the prototype. You can set the part type and environmental factor.</p></li>
+</ul>
+
+<p><center><IMG SRC="./assets/img/ComponentAnalyzer.png" width="500" height="400" ALT="Home"></A></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>For data about the reliability of component parts to be useful it must be analyzed.</p></li>
+<li><p>For this analysis to be useful it must be shared within an organization.</p></li>
+<li><p>The Component Analyzer allows data regarding the reliability of part ot be viewed throughout a corporation.</p></li>
+<li><p>We have a working prototype demonstrating the feasibility og the product. </p></li>
+<li><p>Future work will involve incorporating RCharts for dynamic images, the ability of modifying the characteristics
+of a part, redo the analysis on &quot;the fly&quot; and see how the part responds environmental factors.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Statistical Analysis with R'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Component Analyzer'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Summary'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
