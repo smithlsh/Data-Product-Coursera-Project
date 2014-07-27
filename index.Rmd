@@ -42,8 +42,10 @@ knit        : slidify::knit2slides
 ## Statistical Analysis with R
 
 - R lets you do the analysis and display the results 
-- But R does allow non-R users (managers!!) easily see results and does not let users
-  pull multiple analyses together.
+- But R does allow non-R users (managers!!) perform the calculations, see
+  the results and pull multiple analyses together.
+- Here is the R code that performs the nonlinear regression  
+
 
 ```{r, echo=FALSE}
 library(faraway)
@@ -70,9 +72,9 @@ plot
 ---
 ## The Component Analyzer
 
-- Picks up where R left off.  The Component Analyser lets non-expert users view data from multiple sources and quicky understand how enviornmental influences can affect the probability of part failure.
+- Picks up where R left off.  The Component Analyser lets non-expert users perform the nonlinear regression, view data from multiple sources and quicky understand how enviornmental influences can affect the probability of part failure.
 
-- Here is an image from the prototype. You can set the part type and environmental factor.
+- Here is an image from a prototype. You can set the part type and environmental factor.
 
 <center><IMG SRC="./assets/img/ComponentAnalyzer.png" width="500" height="400" ALT="Home"></A></center>
 
@@ -84,9 +86,8 @@ plot
 
 - For this analysis to be useful it must be shared within an organization.
 
-- The Component Analyzer allows data regarding the reliability of part ot be viewed throughout a corporation.
+- The Component Analyzer allows data regarding the reliability of part to be viewed throughout a corporation.
 
-- We have a working prototype demonstrating the feasibility og the product. 
+- We have a working prototype demonstrating the feasibility of the product. 
 
-- Future work will involve incorporating RCharts for dynamic images, the ability of modifying the characteristics
-  of a part, redo the analysis on "the fly" and see how the part responds environmental factors.
+- Future work will involve incorporating RCharts for dynamic images, and adding more parts.

@@ -80,8 +80,9 @@ or machine learning.  </p></li>
   <article data-timings="">
     <ul>
 <li>R lets you do the analysis and display the results </li>
-<li>But R does allow non-R users (managers!!) easily see results and does not let users
-pull multiple analyses together.</li>
+<li>But R does allow non-R users (managers!!) perform the calculations, see
+the results and pull multiple analyses together.</li>
+<li>Here is the R code that performs the nonlinear regression<br></li>
 </ul>
 
 <pre><code class="r">logitmod&lt;-glm(cbind(damage,6-damage)~temp,family=binomial,orings)
@@ -99,8 +100,8 @@ pull multiple analyses together.</li>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p>Picks up where R left off.  The Component Analyser lets non-expert users view data from multiple sources and quicky understand how enviornmental influences can affect the probability of part failure.</p></li>
-<li><p>Here is an image from the prototype. You can set the part type and environmental factor.</p></li>
+<li><p>Picks up where R left off.  The Component Analyser lets non-expert users perform the nonlinear regression, view data from multiple sources and quicky understand how enviornmental influences can affect the probability of part failure.</p></li>
+<li><p>Here is an image from a prototype. You can set the part type and environmental factor.</p></li>
 </ul>
 
 <p><center><IMG SRC="./assets/img/ComponentAnalyzer.png" width="500" height="400" ALT="Home"></A></center></p>
@@ -117,10 +118,9 @@ pull multiple analyses together.</li>
     <ul>
 <li><p>For data about the reliability of component parts to be useful it must be analyzed.</p></li>
 <li><p>For this analysis to be useful it must be shared within an organization.</p></li>
-<li><p>The Component Analyzer allows data regarding the reliability of part ot be viewed throughout a corporation.</p></li>
-<li><p>We have a working prototype demonstrating the feasibility og the product. </p></li>
-<li><p>Future work will involve incorporating RCharts for dynamic images, the ability of modifying the characteristics
-of a part, redo the analysis on &quot;the fly&quot; and see how the part responds environmental factors.</p></li>
+<li><p>The Component Analyzer allows data regarding the reliability of part to be viewed throughout a corporation.</p></li>
+<li><p>We have a working prototype demonstrating the feasibility of the product. </p></li>
+<li><p>Future work will involve incorporating RCharts for dynamic images, and adding more parts.</p></li>
 </ul>
 
   </article>
