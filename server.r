@@ -1,6 +1,6 @@
 library(shiny)
 library(ggplot2)
-# Note: as a personal side goal I wanted to nonlinear regression.
+# Note: as a personal side goal I wanted to learn nonlinear regression.
 # I based my project off the o-ring example in Julian Faraway's book:
 # Extending the Linear Model with R.  The data is "kluggy".  The
 # project is just a (small) proof of (small) concept.
