@@ -3,10 +3,10 @@ library(ggplot2)
 shinyUI(pageWithSidebar(
   headerPanel("Probability of Part Failure"),
   sidebarPanel(
-    HTML("Select the part and select"),
+    HTML("Select the part and "),
     HTML("the environmental factor and"),
-    HTML("a plot the probability of the"),
-    HTML("part failure will be displayed."),
+    HTML("a plot of the probability of"),
+    HTML("the part failing will be displayed."),
     p(),
     p(),
     selectInput("part","Part:",
